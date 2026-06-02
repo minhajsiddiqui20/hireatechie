@@ -1,7 +1,12 @@
 // Shared nav HTML
+const KORU_SVG = `<svg class="koru-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M20 36C20 36 8 30 8 18C8 11.373 13.373 6 20 6C26.627 6 32 11.373 32 18C32 22.418 29.627 25.373 26 27C22.373 28.627 20 27 20 23C20 19 22.627 17.373 25 18C27.373 18.627 28 21 26 22C24 23 22 22 22 20" stroke="#1D9E75" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="20" cy="20" r="2" fill="#1D9E75" opacity="0.35"/>
+</svg>`;
+
 const NAV_HTML = `
 <nav>
-  <a href="/index.html" class="nav-logo">hire a <span>techie</span></a>
+  <a href="/index.html" class="nav-logo">${KORU_SVG}hire a <span>techie</span></a>
   <ul class="nav-links" id="nav-links">
     <li><a href="/pages/services.html">Services</a></li>
     <li><a href="/pages/how-it-works.html">How it works</a></li>
@@ -19,10 +24,14 @@ const NAV_HTML = `
   </button>
 </nav>`;
 
+const KORU_SM = `<svg class="koru-mark-sm" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path d="M20 36C20 36 8 30 8 18C8 11.373 13.373 6 20 6C26.627 6 32 11.373 32 18C32 22.418 29.627 25.373 26 27C22.373 28.627 20 27 20 23C20 19 22.627 17.373 25 18C27.373 18.627 28 21 26 22C24 23 22 22 22 20" stroke="#9FE1CB" stroke-width="1.8" stroke-linecap="round"/>
+</svg>`;
+
 // Shared footer HTML
 const FOOTER_HTML = `
 <footer>
-  <div class="footer-logo">hire a <span>techie</span></div>
+  <div class="footer-logo">${KORU_SM}hire a <span>techie</span></div>
   <ul class="footer-links">
     <li><a href="/pages/services.html">Services</a></li>
     <li><a href="/pages/how-it-works.html">How it works</a></li>
@@ -30,6 +39,7 @@ const FOOTER_HTML = `
     <li><a href="/pages/contact.html">Contact</a></li>
   </ul>
   <p class="footer-copy">&copy; 2026 Hire a Techie. New Zealand &amp; Australia.</p>
+  <p class="footer-nz">Made in Aotearoa</p>
 </footer>`;
 
 // Inject nav and footer

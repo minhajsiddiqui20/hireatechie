@@ -54,8 +54,23 @@ nav {
   font-size: 20px;
   color: var(--text);
   letter-spacing: -0.3px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  text-decoration: none;
 }
 .nav-logo span { color: var(--green); font-style: italic; }
+.nav-logo .koru-mark { width: 26px; height: 26px; flex-shrink: 0; }
+
+/* ---- KOWHAIWHAI HERO BACKGROUND ---- */
+.kw-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  z-index: 0;
+}
+.hero-inner { position: relative; z-index: 1; }
 
 .nav-links {
   display: flex;
@@ -389,7 +404,6 @@ h2 {
   flex-wrap: wrap;
 }
 
-/* ---- FOOTER ---- */
 footer {
   background: var(--bg-dark);
   color: rgba(255,255,255,0.5);
@@ -404,7 +418,11 @@ footer {
   font-family: 'DM Serif Display', serif;
   font-size: 16px;
   color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
+.footer-logo .koru-mark-sm { width: 18px; height: 18px; flex-shrink: 0; }
 .footer-logo span { color: var(--green-mid); font-style: italic; }
 .footer-links {
   display: flex;
@@ -418,6 +436,21 @@ footer {
 }
 .footer-links a:hover { color: var(--green-mid); }
 .footer-copy { font-size: 12px; }
+.footer-nz {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.footer-nz::before {
+  content: '';
+  width: 14px; height: 1px;
+  background: var(--green-mid);
+  display: block;
+}
 
 /* ---- PAGE HERO (inner pages) ---- */
 .page-hero {
