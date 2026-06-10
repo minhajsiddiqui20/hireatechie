@@ -60,18 +60,8 @@ nav {
   gap: 9px;
   text-decoration: none;
 }
-.nav-logo span { color: var(--green); font-style: italic; }
+.nav-logo span { color: var(--green); font-style: normal; }
 .nav-logo .koru-mark { width: 26px; height: 26px; flex-shrink: 0; }
-
-/* ---- KOWHAIWHAI HERO BACKGROUND ---- */
-.kw-hero-bg {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.045;
-  z-index: 0;
-}
-.hero-inner { position: relative; z-index: 1; }
 
 .nav-links {
   display: flex;
@@ -135,17 +125,25 @@ nav {
   position: relative;
   overflow: hidden;
 }
-.hero::before {
-  content: '';
-  position: absolute;
-  top: -120px; right: -120px;
-  width: 500px; height: 500px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(29,158,117,0.08) 0%, transparent 70%);
-  pointer-events: none;
-}
 .hero-inner {
-  max-width: 640px;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  max-width: 1200px;
+}
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+.hero-image {
+  flex: 0 0 45%;
+  max-width: 45%;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
 }
 .hero-badge {
   display: inline-flex;
@@ -435,7 +433,7 @@ footer {
   gap: 8px;
 }
 .footer-logo .koru-mark-sm { width: 18px; height: 18px; flex-shrink: 0; }
-.footer-logo span { color: var(--green-mid); font-style: italic; }
+.footer-logo span { color: var(--green-mid); font-style: normal; }
 .footer-links {
   display: flex;
   gap: 20px;
@@ -590,6 +588,8 @@ footer {
   .stats { grid-template-columns: 1fr 1fr; }
   .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
   .stat-item:nth-child(even) { border-left: 1px solid var(--border); }
+  .hero-inner { flex-direction: column; gap: 32px; }
+  .hero-image { flex: none; max-width: 100%; width: 100%; }
   .hero-btns { flex-direction: column; }
   .hero-btns .btn { width: fit-content; }
   .cards-2col { grid-template-columns: 1fr; }
